@@ -1,0 +1,10 @@
+[Unit]
+Description=Run sysmon.py every 15min on NIC %i
+
+[Timer]
+# Every 15 min:
+OnCalendar=*:0/15
+Persistent=true
+
+[Install]
+WantedBy=timers.target

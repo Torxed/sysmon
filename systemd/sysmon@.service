@@ -1,0 +1,8 @@
+[Unit]
+Description=Saves system monitoring information on NIC %i
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /usr/bin/sysmon --output=/root/sysinfo.csv --interface=%i --partition=/
+User=root
+Group=root
